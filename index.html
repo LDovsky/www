@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Exchange</title>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+    <header>
+        <h1>Crypto Exchange</h1>
+        <center>
+            <table>
+        <th><p id="dateContainer"></p></th>
+    <th><p id="timeContainer" title="Kyiv"></p></th>
+</table>
+        </center>
+        <span id="timeText"></span>
+        <div class="tooltip" id="tooltip">Kyiv</div>
+        <div id="ticker-container">
+            <div id="ticker">
+                <span id="usdt-rate">USDT: Loading...</span>
+                <span id="btc-rate">BTC: Loading...</span>
+                <span id="eth-rate">ETH: Loading...</span>
+                <span id="ltc-rate">LTC: Loading...</span>
+                <span id="xrp-rate">XRP: Loading...</span>
+                <span id="ton-rate">TON: Loading...</span>
+                <span id="not-rate">NOT: Loading...</span>
+            </div>
+        </div>
+    </header>
+    <nav>
+        <a href="#">Home</a>
+        <a href="#">Rates</a>
+        <a href="#">Exchange</a>
+    </nav>
+    <div class="container">
+        <form id="exchange-form">
+            <label for="from-currency">From:</label>
+            <select id="from-currency">
+                <option value="USDT">USDT</option>
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="LTC">LTC</option>
+                <option value="XRP">XRP</option>
+                <option value="TON">TON</option>
+                <option value="NOT">NOT</option>
+            </select>
+            <label for="to-currency">To:</label>
+            <select id="to-currency">
+                <option value="USDT">USDT</option>
+                <option value="BTC">BTC</option>
+                <option value="ETH">ETH</option>
+                <option value="LTC">LTC</option>
+                <option value="XRP">XRP</option>
+                <option value="TON">TON</option>
+                <option value="NOT">NOT</option>
+            </select>
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" value="1" min="0" step="any">
+            <button type="button" onclick="performExchange()">Exchange</button>
+        </form>
+        <div id="exchange-result">You will receive 0.0000</div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Crypto Exchange</p>
+    </footer>
+    
+        <script src="js/main.js"></script>
+</body>
+</html>
